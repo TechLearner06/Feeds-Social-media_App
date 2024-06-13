@@ -1,0 +1,1361 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;   
+}
+
+
+.text-bold{
+    font-weight: 500;
+}
+
+.text-muted{
+  color:grey;  
+}
+
+
+.text-link{
+    text-decoration: none;
+    color: white;
+}
+
+
+.messages{
+    color:green;
+}
+
+
+
+/* login */
+
+#login{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.container{
+    padding: 10px;
+}
+
+.login-form{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.login-form .fields{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.login-form input{
+    width:350px;
+    height: 100%;
+    margin-bottom: 10px;
+ 
+}
+
+
+.logo {
+    width:500px;
+    height:50px;
+    padding-top: 10px;
+        
+}
+
+
+.logo h1{
+    color:crimson;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+
+#login button{
+    margin-top:10px;
+    background-color: crimson;
+    color:white;
+    width:350px;
+    height:40px;
+    font-weight: bold;
+    cursor: pointer;
+    border:none;
+    outline:none;
+    border-radius: 10px;
+
+}
+
+.error p{
+    padding-left:100px;
+    color:red;
+}
+
+
+.forgot-pswd {
+    margin: 10px;
+    text-align: right;
+    
+}
+
+.forgot-pswd a{
+    text-decoration: none;
+    color:crimson;
+    
+}
+
+.register-link{
+    margin: 10px;
+    text-align: center;
+}
+
+.register-link a{
+    color:darkblue;
+    text-decoration: none;
+}
+
+
+/* register */
+
+#register{
+    display:flex;
+    align-items: center;
+    justify-content: center; 
+    margin-top:80px;  
+}
+
+#register .row{
+    display:flex;
+    flex-direction: column;
+    width:500px;
+    height:600px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.register-link{
+    text-align: center;
+}
+
+.register-form{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    margin-bottom: 5px;
+    
+}
+
+
+
+
+
+
+
+/* header */
+
+#header{
+    background-color:#333333;
+    width:100%;
+    color: white;
+    position: fixed;
+    z-index: 2;
+        
+}
+
+.container{
+    padding:10px 40px;
+}
+
+
+.logo-name {
+    transition: margin-left 0.3s ease-out, width 0.3s ease-out; /* Add transition for margin-left and width */
+}
+
+
+.logo-name.active {
+    margin-left: 300px;
+    width: calc(100% - 250px); /* Adjust the width based on your design */
+}
+
+
+
+.logo-name h1{
+    color:white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+
+.header-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+
+}
+
+.nav-items{
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+
+
+
+.nav-items ul li{
+    display:block;
+    margin-bottom: 15px;
+    width:300px;
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+.nav-items ul li a{
+    color:crimson;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-items ul li a:hover{
+    color: lightcoral;
+}
+
+.nav-items ul .fa{
+    position: absolute;
+    top:25px;
+    left:25px;
+    cursor: pointer;
+}
+
+.nav-items ul .fa.clr{
+    color: crimson;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    margin-left:100px;
+    width:500px;
+    height:40px;
+    background-color: black;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+
+.search-bar input{
+    background: transparent;
+    border: none;
+    outline:none;
+    width:60%;
+    color: white;
+    border-radius: 10px;
+    margin-left:10px;
+
+}
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 40px;
+}
+
+/* Style the button with a background image */
+.drop-btn {
+    background-image: url('/static/images/pmy0_gw7o_230508.jpg');
+    background-size: cover; /* Adjust the background size as needed */
+    width: 40px; /* Set the width of your button */
+    height: 40px; /* Set the height of your button */
+    border: none;
+    cursor: pointer;
+    border-radius:50%;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+    background-color: #f2f2f2;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    background-color: crimson;
+    color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    text-align: center;
+}
+
+
+
+
+/* nav js */
+
+.nav-items .fa{
+    display: block;
+    color:white;
+      
+}
+
+/* sidebar section */
+
+
+
+/* posts section */
+
+#posts{
+    padding:79px 0px;
+    background-color:black;
+}
+
+#posts .container{
+    padding: 0px;
+}
+
+
+#posts .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.posts-section{
+    flex-basis:70%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+    overflow: scroll;
+    overflow-x:hidden;
+    
+}
+
+.sidebarsection{
+    flex-basis: 30%;
+    
+}
+
+.sidebarmenu{
+    padding:20px 0;
+    width: 300px;
+    background-color: #333333;
+    position: fixed;
+    
+    z-index:1;
+    border-radius:20px;
+    margin: 20px;
+    color: white;
+    
+    
+}
+
+.about-content{
+    text-align: center;
+    
+}
+
+
+.about-image img{
+     width:100px;
+     height:100px;
+     border-radius: 50%;
+
+}
+
+.view-profile{
+   
+    border:2px solid crimson;
+    width:85px;
+    height:30px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:20px;
+    text-align: center;
+    font-size: 13px;
+    margin-right: 20px;
+    
+}
+
+.view-profile p a{
+    text-decoration: none;
+    color:crimson;
+   
+}
+
+.profile-settings{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-profile p a:hover{
+    color:blue;
+}
+
+
+#posts .container{
+    overflow: hidden;
+}
+
+
+
+.card{
+    width:500px;
+    margin-bottom: 10px;
+    background-color: #333333;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+
+
+.profile-name{
+    width:500px;
+    padding:15px;
+    margin-bottom: 0;
+    color:crimson;
+    text-align: left;
+    
+}
+
+
+
+.profile-name span{
+    border:1px solid black;
+    color:white;
+    margin-left: 10px;
+    padding:5px;
+    border-radius: 5px;
+   
+
+}
+
+.card img{
+    width:500px;
+    height:400px;
+   
+
+}
+.actions{
+    width: 500px;
+    padding: 10px;
+    margin-bottom: 0;
+    text-align: left;
+
+}
+
+
+
+.actions-section button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #333333;
+}
+
+
+
+
+.caption {
+    margin-top: 10px;
+    font-size:15px;
+    text-align: left;
+    color: white;
+}
+
+
+
+/* friendlist */
+
+#friends-section{
+    padding:80px 0px;
+    background-color: black;
+    color: white;
+
+}
+
+#friends-section .container{
+    padding:0px;
+}
+
+#friends-section .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.friendsdetails{
+    flex-basis: 40%;
+    text-align: left;
+    height:100vh;
+    overflow:scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+
+    
+}
+
+.following-titles{
+    display: flex;
+    margin:20px 0 40px;
+    
+    
+}
+
+.following-titles p{
+    margin-right: 200px;
+    color:white;
+}
+
+
+.following-links{
+    margin-right:50px;
+    font-size:18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.following-links::after{
+    content:'';
+    width:0;
+    height:3px;
+    background:red;
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    transition: 0.5s;
+}
+
+.following-links.active-link::after{
+    width:100%;
+}
+
+
+.following-contents{
+    display: none;
+}
+
+.following-contents.active-tab{
+    display:block;
+}
+
+
+.friend-requests{
+    flex-basis:30%;
+    overflow:scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+   
+}
+
+.friend-requests h1{
+    color: white;
+}
+
+
+
+.friend-requests .container{
+    display: flex;
+    align-items: center;
+}
+
+.follow-request{
+    display: flex;
+    flex-direction: column;
+}
+
+.friend-requests img {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    border-radius: 50%; /* To make the image circular */
+    margin-right: 10px; /* Add some space between the image and the text */
+    border: 2px solid crimson;
+}
+
+.request-actions{
+    display: flex;
+    align-items:center;
+    margin-left:10px;
+    padding-right: 10px;
+    
+}
+
+
+.heading h1{
+    margin-top:10px;
+    font-size: 20px;
+    color:crimson;
+    text-align: left;
+    
+    
+}
+
+
+.following-section {
+    margin-top: 20px;
+    display: flex;
+    align-items: center; /* Align items vertically at the center */
+}
+
+.following-section img {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    border-radius: 50%; /* To make the image circular */
+    margin-right: 10px; /* Add some space between the image and the text */
+    border: 2px solid crimson;
+}
+
+
+
+/* profile */
+
+#profile-page{
+    padding:0px 0px;
+}
+
+#profile .container{
+    padding:0px 0px;
+}
+
+
+
+#profile{ 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+#profile .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   
+}
+
+.profile-details{
+    padding-left: 150px;
+    flex-basis: 40%;
+    text-align: center;
+}
+
+
+.profile-image{
+    text-align: left;
+}
+
+.profile-image img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+
+}
+
+
+.p-name{
+    color:black;
+    text-align: justify;
+}
+
+
+
+
+.followers-details{
+    flex-basis: 50%;
+    display:flex;
+    align-items: center;
+    
+}
+
+.posts-no , .followers-no , .following-no{
+    margin-right:30px;
+}
+
+
+.posts-no h2 , .followers-no h2, .following-no h2{
+    text-align: center;
+
+}
+
+.feeds-heading{
+    text-align:center;
+    font-size: 22px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:crimson
+}
+
+#user-posts{
+    padding:20px 40px;
+}
+
+
+/* add-post-form */
+
+#nav-header1{
+    padding:20px;
+    background-color:crimson;
+}
+
+#nav-header{
+    padding:20px;
+    background-color: crimson;
+}
+
+#nav-header a{
+    text-decoration: none;
+    color:white;
+    font-size: 22px;
+
+}
+
+.new-post-form{
+    padding:80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.add-post-form{
+    margin-top: 10px;
+    width:100%;
+    background-color: white;
+    height:400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px lightcoral;
+
+}
+
+
+.add-post-table td{
+    padding-bottom:20px;
+    
+}
+
+input[type="file"]
+{
+    width:100%;
+    color:crimson;
+    background-color: #f2f2f2;
+}
+
+textarea{
+    background-color: #f2f2f2;
+    width:100%;
+    border-radius: 10px;
+    color:white;
+    border: none;
+    padding:10px;
+    color: black;
+}
+
+.share-btn{
+    background-color: crimson;
+    color:white;
+    padding: 10px;
+    border:none;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 18px;
+    width:100%;
+
+
+}
+
+.btn:hover{
+    background-color: crimson;
+    
+}
+
+
+/* login */
+
+
+
+
+
+
+
+
+
+
+
+
+/* js interactive features  - like post*/ 
+
+#like-post{
+    color:black;
+    margin-right:1px;
+
+}
+
+#like-post.liked{
+    color:red; 
+}
+
+.actions-section .fa{
+    font-size: 20px;
+    margin-right: -10px;
+}
+
+/* comments */
+
+/* Style for the comment modal */
+
+
+
+
+.comment-section {
+    background-color: #333333;
+    margin-top:65px;
+    position: fixed;
+    top: 0;
+    right: -300px; /* Initial position, off the screen */
+    width: 300px;
+    height: 100%;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    overflow-y: auto;
+    padding:10px;
+    color:white;
+}
+
+.comment {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.comment-text {
+    margin-left: 10px;
+    
+}
+
+.comment input {
+    width: 80%;
+    padding: 5px;
+    margin-right: 10px;
+    background-color:transparent;
+    color: #ccc;
+}
+
+.comment button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border:none;
+    outline: none;
+    background-color: crimson;
+    border-radius:50px ;
+
+}
+
+
+
+/* bottom nav styles for small screens */
+
+#bottom-nav{
+    display:none;
+}
+
+
+
+.new-post-button{
+    margin-left:auto;
+    margin-right: 50px;
+}
+
+.post-btn{
+    background-color: crimson;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:90px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+   
+
+}
+
+.post-btn a{
+    text-decoration: none;
+    color:white;
+    margin-right: 5px;
+
+}
+
+
+
+
+
+
+
+@media only screen and (max-width:600px){
+
+     /* index */
+
+     #posts{
+        padding:0px 20px;
+        height: 590px;
+        overflow: scroll;
+       
+        
+    }
+
+    #posts .row{
+        display: flex;
+    }
+    
+    .posts-section{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-style: italic;
+    }
+    
+    #posts .container{
+        overflow: hidden;
+    }
+    
+    
+    
+    
+    
+    
+    .card{
+        width:100%;
+        margin-bottom: 150px;
+        height:300px;
+        
+    }
+    
+    
+    .profile-name{
+        width:100%;
+        background-color:#f2f2f2;
+        padding:15px;
+        margin-bottom: 0;
+        color:crimson;
+        
+    }
+    
+    
+    
+    .profile-name span{
+        border:1px solid black;
+        color:blue;
+        margin-left: 10px;
+        padding:5px;
+        border-radius: 5px;
+       
+    
+    }
+    
+    .card img{
+        width:100%;
+        height:300px;
+       
+    
+    }
+    .actions{
+        background-color: #f2f2f2;
+        width: 500px;
+        padding: 10px;
+        margin-bottom: 0;
+    
+    }
+    
+    .actions-section button {
+    
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .caption {
+        margin-top: 10px;
+        font-size:10px;
+    }
+
+
+    
+   #friends-section{
+       
+        padding:80px 60px;
+        height:680px;
+        overflow: scroll;
+
+    }
+
+    #friends-section .row{
+        width:400px;
+    }
+
+ 
+   
+    
+    .following-titles p{
+        margin-right: 50px;
+    }
+    
+    
+
+   
+
+   
+    /* profile */
+
+    #profile-page{
+        height:600px;
+        overflow: scroll;
+
+    }
+
+    #profile{
+        padding:10px 0px;
+        
+        
+       
+        
+    }
+    
+    #profile .row{
+        display: flex;
+        align-items: left;
+        justify-content: left;   
+    }
+    
+    .profile-details{
+        text-align: left;
+       
+        padding-left: 0;
+            
+        
+        
+    }
+    
+    
+    
+    
+    .p-name{
+        color:black;
+        text-align: justify;
+        font-size: 10px;
+        line-height: 20px
+    }
+    
+    
+    
+
+    .followers-details h1{
+        font-size: 16px;
+    }
+    
+    .followers-details h2{
+        font-size: 15px;
+    }
+
+
+    .posts-no , .followers-no , .following-no{
+        margin-right:10px;
+    }
+    
+    
+    .posts-no h2 , .followers-no h2, .following-no h2{
+        text-align: center;
+    
+    }
+    
+
+    #user-posts{
+        
+       padding:10px 10px;
+       overflow: hidden;
+        
+    }
+
+    .logo-name{
+        transition: none;
+    }
+
+   
+    
+
+
+    /* nav style */
+
+    .nav-items .fa{
+        display: none;
+    }
+    
+    
+    #bottom-nav{
+        display:block;
+        padding:20px;
+        background-color:crimson ;
+        
+
+
+        
+    }
+
+    #bottommenu{
+        list-style: none;
+        display: flex; 
+        align-items: center;
+         
+    }
+
+    #bottommenu li{
+        margin-right: 55px;
+    }
+
+    #bottommenu li a{
+        color:white;
+    }
+
+    #bottommenu .fa{
+        font-size: 20px;
+    }
+
+   
+
+   
+    /* login */
+
+    
+#login{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:100px;   
+}
+
+
+#login .row{
+    display:flex;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);  
+    
+}
+
+
+.login-form{
+    display:flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.login-table tr td{
+    padding-bottom:20px;
+    
+}
+
+.login-table tr td h4{
+    display: none;
+    
+}
+
+input{
+    width:300px;
+    height:50px;
+    border-radius: 10px;
+    border: none;
+    background-color: whitesmoke;
+    padding:10px;
+}
+
+
+.forgot-pswd {
+    text-align: center;
+    
+}
+
+.forgot-pswd a{
+    text-decoration: none;
+    color:crimson;
+    
+}
+
+/* register */
+
+#register .row{
+    display:flex;
+    flex-direction: column;
+    width:500px;
+    height:600px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+   
+}
+
+
+.register-link{
+    
+    text-align: center;
+}
+
+.register-link a{
+    color:darkblue;
+    text-decoration: none;
+}
+
+.register-form{
+    display:flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.register-table tr td{
+    padding-bottom:10px;
+    
+}
+
+.register-table tr td h4{
+    display: none;
+    
+}
+
+.new-post-button{
+    display:none;
+}
+
+.add-post-form{
+    margin-top: 10px;
+    width:300px;
+    background-color: white;
+    height:400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px lightcoral;
+
+}
+
+.new-post-form{
+    padding-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebarsection{
+    display: none;
+}
+
+
+
+#nav-header{
+    display: none;
+}
+
+#nav-header2{
+    padding:20px;
+    background-color:crimson;
+}
+
+#nav-header1{
+    padding:20px;
+    background-color:crimson;
+}
+
+/* comment styling */
+
+.commentSection {
+    bottom:0;
+    bottom: -300px; /* Initially hide the comment section off-screen from the bottom */
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    margin-left:100px;
+    width:100%;
+    height:40px;
+    background-color: black;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+
+.search-bar input{
+    background-color: black;
+    border: none;
+    outline:none;
+    color:#f2f2f2;
+    width:100%;
+    height:40px;
+    border-radius: 10px;
+    margin-left:2px;
+    
+
+}
+
+     
+    }
+
+
+

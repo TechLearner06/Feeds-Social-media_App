@@ -1,0 +1,50 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media App-Login</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="login">
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <h1>feeds</h1>
+                </div>
+                
+                <form class="login-form" method="POST">
+                    {% csrf_token %}
+                    <div class="fields">
+                        <label>Username</label>
+                        <input type="text" name="username" placeholder="enter username" required>
+                    </div>
+                    <div class="fields">
+                        <label>Password</label>
+                        <input type="password" name="password" placeholder="enter password" required>
+                    </div>
+                    
+                    <div class="login-btn">
+                        <input type="submit" value="Sign-In">
+                    </div>
+
+                    <div class="msg">
+                        {% for msg in messages %}
+                        <h5>{{message}}</h5>
+                        {% endfor %}
+                    </div>
+
+                </form>
+                <p class="forgot-pswd"><a href="">forgot password?</a></p>
+                <div class="register-link">
+                    <p>New to feeds? <a href="{% url 'signup' %}">Create an Account</a></p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

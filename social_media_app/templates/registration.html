@@ -1,0 +1,56 @@
+
+{%load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media App-Login</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <div id="register">
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <h1>feeds</h1>
+                </div>
+                
+                <form class="register-form" method="POST">
+                    {% csrf_token %}
+                    <div class="fields">
+                        <label>Username</label>
+                        <input type="text" name="username" placeholder="enter username" required>
+                    </div>
+                    <div class="fields">
+                        <label>E mail</label>
+                        <input type="text" name="email" placeholder="enter Email" required>
+                    </div>
+                    <div class="fields">
+                        <label>Password</label>
+                        <input type="password" name="password1" placeholder="enter password" required>
+                    </div>
+                    <div class="fields">
+                        <label>Confirm Password</label>
+                        <input type="password" name="password2" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="reg-btn">
+                        <input type="submit" value="register" class="login-btn">
+                    </div>
+                    
+                    <div class="error">
+                        {% for msg in messages %}
+                        <h5>{{message}}</h5>
+                        {% endfor %}
+                    </div>
+                    
+                </form>
+               
+                <div class="register-link">
+                    <p>Already have an account? <a href="{% url 'login' %}">Login Here</a></p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

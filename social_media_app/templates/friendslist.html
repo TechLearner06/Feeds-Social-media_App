@@ -1,0 +1,173 @@
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feeds</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    
+</head>
+<body>
+
+ 
+
+    <div id="header">
+        <div class="container">
+            <div class="row">
+                <div class="header-section">
+                    <div class="logo-name">
+                        <h1>feeds</h1>
+                    </div>
+                    <div class="search-bar">
+                        <i class="fa fa-search"></i>
+                        <input type="search" placeholder="search for creators ,posts">
+                    </div>
+                    <div class="new-post-button">
+                        <button class="post-btn"><a href="addposts.html">New post</a><i class="fa fa-camera"></i></button>
+                    </div>
+                    <div class="dp-img">
+                        <button class="dropbtn"></button>
+                        <div class="dropdown-content">
+                            <a href="#">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+ 
+
+    <div id="friends-section">
+        <div class="container">
+            <div class="row">
+                <div class="sidebarsection">
+                    <div class="sidebarmenu">
+                        <div class="about-content">
+                            <div class="about-image">
+                                <img src="{% static 'images/pmy0_gw7o_230508.jpg'%}" alt="">
+                            </div>
+                            <div class="dp-name">
+                                <h2>abcdefg</h2>
+                                <p>haiii friends</p>
+                            </div>
+                        </div>
+                        <div class="profile-settings">
+                            <div class="view-profile">
+                                <p><a href="{% url 'yourprofile' %}">View Profile</a></p>
+                            </div>
+                            
+                        </div>
+                        <div class="nav-items">
+                            <ul id="sidemenu">
+                                <li><a href="{% url 'index' %}"></i>Home</a></li>
+                                <li><a href="{% url 'followers' %}">Friends</a></li>
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        
+
+
+
+                <div class="friendsdetails">
+                    <div class="following-titles">
+                        <p class="following-links active-link" onclick="opentab('following',event)">Following</p>
+                        <p class="following-links " onclick="opentab('followers',event)">Followers</p>
+                    </div>
+
+                    <div class="following-contents active-tab"  id="following">
+                        
+
+                        <div class="following-section">
+                            <img src="{% static 'images/21393418.jpg' %}" alt="">
+                            <h4 class="user-name"><a href="friendsprofile.html" class="text-link">hijklmno</a></h4>
+                        </div>
+                        
+                        <div class="following-section">
+                            <img src="images/3r5o_60xr_230710.jpg" alt="">
+                            <h4 class="user-name"><a href="friendsprofile.html" class="text-link">pqrstuv</a></h4>
+                        </div>
+                       
+                        <div class="following-section">
+                            <img src="images/pmy0_gw7o_230508.jpg" alt="">
+                            <h4 class="user-name"><a href="friendsprofile.html" class="text-link">aaaabbbb</a></h4>
+                        </div>
+                    </div>
+                
+
+                    <div class="following-contents"  id="followers">
+                        <div class="following-section">
+                            <img src="images/pmy0_gw7o_230508.jpg" alt="">
+                            <h4 class="user-name"><a href="friendsprofile.html" class="text-link">abcdefg</a></h4>
+                        </div>
+                        
+                        <div class="following-section">
+                            <img src="images/pmy0_gw7o_230508.jpg" alt="">
+                            <h4 class="user-name"><a href="friendsprofile.html" class="text-link">abcdefg</a></h4>
+                        </div>
+                        
+                        <div class="following-section">
+                            <img src="images/pmy0_gw7o_230508.jpg" alt="">
+                            <h4 class="user-name"><a href="friendsprofile.html" class="text-link">abcdefg</a></h4>
+                        </div>
+                        
+                        <div class="following-section">
+                            <img src="images/pmy0_gw7o_230508.jpg" alt="">
+                            <h4 class="user-name"><a href="friendsprofile.html" class="text-link">abcdefg</a></h4>
+                        </div>
+                       
+                        <div class="following-section">
+                            <img src="images/pmy0_gw7o_230508.jpg" alt="">
+                            <h4 class="user-name"><a href="friendsprofile.html" class="text-link">abcdefg</a></h4>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <div class="friend-requests">
+                    <h1>Follow Requests</h1>
+                    <div class="container">
+                        
+                        <div class="follow-request">
+                            <img src="images/pmy0_gw7o_230508.jpg" alt="">
+                            <h4 class="user-name">abcdefg</h4>
+                        </div>
+                        <div class="request-actions">
+                            <h4>confirm</h4>
+                            <h4>delete</h4>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+
+    </div>
+
+     <!--bottom navigation for small screens-->
+     <div id="bottom-nav">
+        <ul id="bottommenu">
+            <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+            <li><a href="friendslist.html"><i class="fa fa-heart"></i></a></li>
+            <li><a href="addposts.html"><i class="fa fa-plus-square-o"></i></a></li>
+            <li><a href="profile.html"><i class="fa fa-user"></i></a></li>
+            <li><a href="#"><i class="fa fa-search"></i></a></li>
+        </ul>
+    </div>
+
+    <script src="{% static 'js/index.js' %}"></script>
+
+</body>
+</html>
+
+
