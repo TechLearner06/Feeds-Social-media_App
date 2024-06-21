@@ -1,0 +1,64 @@
+{%load static%}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media App-Account Settings</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+
+<body>
+
+    <div class="profile-settings">
+        <div class="container">
+            <div class="heading">Account Settings</div>
+            <hr>
+                <form class="accountform" method="POST">
+                {% csrf_token %}
+                    <div class="dp-image-div">
+                        <label>Add Profile Picture</label>
+                        <input type="file"  id="profile_pic" name="dp">
+                    </div>
+                    <div class="account-form-div">
+                        <label>Username</label>
+                        <input type="text" name="username"  value="{{user.username}}"placeholder="Bio...">
+                        <label>Name</label>
+                        <input type="text" name="name" placeholder="Enter Your Name">
+                        <label>Bio</label>
+                        <textarea  id="description" name="bio" rows="4" cols="50" placeholder="Enter your Bio" required=""></textarea>
+                        <label>Location</label>
+                        <input type="text" name="location">
+                    </div>
+                    
+                    <div class="gender-div">
+                        <label>Gender</label>
+                        <input type="radio" id="female" name="gender" required="">
+                        <label id="female">Female</label>
+                        <input type="radio" id="male" name="gender" required="">
+                        <label id="male">Male</label>
+                        <input type="radio" id="others" name="gender" required="">
+                        <label id="others">Others</label>
+                    </div>
+                    <div class="submit-cancel-btn">
+                        <button type="cancel"><a href={% url "account_settings" %}>Cancel</a></button>
+                        <button type="Submit">Submit</button>
+                    </div>
+                    
+                    
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+        
+
+
+
+
+
+<script src="{% static 'js/index.js' %}"></script>
+
+</body>
+</html>

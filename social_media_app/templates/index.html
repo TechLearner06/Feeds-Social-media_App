@@ -1,16 +1,13 @@
-{% load static %}
+{%load static%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>feeds</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <title>Social Media App-home</title>
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    
 </head>
-<body>
 
+<body>
     <div id="header">
         <div class="container">
             <div class="row">
@@ -26,13 +23,19 @@
                         <button class="post-btn"><a href="addposts.html">New post</a><i class="fa fa-camera"></i></button>
                     </div>
 
+
                     <div class="dropdown">
                         <button class="drop-btn"></button>
                         <div class="dropdown-content">
+                            
                             <a href="{% url 'index' %}">View Profile</a>
+                            <a href="{% url 'account_settings' %}">Edit Profile</a>
                             <a href="{% url 'logout' %}">Logout</a>
                         </div>
                     </div>
+
+
+                    <h4 class="username">{{user.username}}</h4>
 
                 </div>
             </div>
@@ -41,58 +44,41 @@
     
 
 
- 
-
     <div id="posts">
         <div class="container">
-            <div class="row">
-                <div class="sidebarsection">
-                    <div class="sidebarmenu">
-                        <div class="about-content">
-                            <div class="about-image">
-                                <img src="{% static 'images/pmy0_gw7o_230508.jpg'%}" alt="">
-                            </div>
-                            <div class="dp-name">
-                                <h2>{{user.username}}</h2>
-                                <p>haiii friends</p>
-                            </div>
+
+            <div class="posts-section">
+                <div class="card">
+                    <h5 class="profile-name">hijklmno<span>following</span></h5>
+                    <img src="{% static 'images/21393418.jpg'%}" alt="" class="img-fluid">
+                    <div class="actions">
+                        <div class="actions-section">
+                            <button id="like-post" onclick="toggleLike(this)"><i class="fa fa-heart"></i></button>
+                            <span id="like-count">255</span>
+                            <button class="comment-icon" onclick="toggleComments()"><i class="fa fa-comment"></i></button>
+                            <button><i class="fa fa-share"></i></button>
                         </div>
-                        
-                        <div class="nav-items">
-                            <ul id="sidemenu">
-                                <li><a href="{% url 'index' %}"></i>Home</a></li>
-                                <li><a href="{% url 'followers' %}">Friends</a></li>
-                            </ul>
-                        </div>
+                        <p class="caption"><span class="profile-name">hijklmno</span>amn't i look good:)</p> 
                     </div>
-                </div>
-        
-
-
-
-
-                <div class="posts-section">
-                    
-
-                    <div class="card">
-                        <h5 class="profile-name">hijklmno<span>following</span></h5>
-                        <img src="{% static 'images/21393418.jpg'%}" alt="" class="img-fluid">
-                        <div class="actions">
-                            <div class="actions-section">
-                                <button id="like-post" onclick="toggleLike(this)"><i class="fa fa-heart"></i></button>
-                                <span id="like-count">255</span>
-                                <button class="comment-icon" onclick="toggleComments()"><i class="fa fa-comment"></i></button>
-                                <button><i class="fa fa-share"></i></button>
-                            </div>
-                            <p class="caption"><span class="profile-name">hijklmno</span>amn't i look good:)</p> 
-                        </div>
-                    </div>
-
-                    
-
-
                 </div>
             </div>
+
+            <div class="posts-section">
+                <div class="card">
+                    <h5 class="profile-name">hijklmno<span>following</span></h5>
+                    <img src="{% static 'images/21393418.jpg'%}" alt="" class="img-fluid">
+                    <div class="actions">
+                        <div class="actions-section">
+                            <button id="like-post" onclick="toggleLike(this)"><i class="fa fa-heart"></i></button>
+                            <span id="like-count">255</span>
+                            <button class="comment-icon" onclick="toggleComments()"><i class="fa fa-comment"></i></button>
+                            <button><i class="fa fa-share"></i></button>
+                        </div>
+                        <p class="caption"><span class="profile-name">hijklmno</span>amn't i look good:)</p> 
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
